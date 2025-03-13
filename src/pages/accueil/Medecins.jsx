@@ -1,10 +1,10 @@
-import { useNavigate, useLocation, useOutletContext } from 'react-router-dom'
+import { useNavigate, useLocation,Outlet, useOutletContext } from 'react-router-dom'
 //import reactLogo from '../assets/react.svg'
 import { useState, useEffect } from 'react';
 import './Medecins.css';
 import Accueil from './Accueil.jsx';
 import api from '../../api/api.jsx';
-
+//import FicheMedecin 
 
 function Medecins(){
   const { state } = useLocation();
@@ -60,6 +60,8 @@ function Medecins(){
       setListeVisible(false);
     }
     return leMedecin;
+    setVersion(version +1)
+    navigate('/Accueil/Medecins/'+leMedecin.id)
  }
 
 
@@ -128,7 +130,7 @@ function Medecins(){
    <br/>
      
 
-
+    <Outlet context = {[medecins, setMedecins]}  key={version} />
    </>
   )
 
@@ -150,3 +152,4 @@ export default Medecins;
 </li>
 )}
 </ul>*/
+

@@ -6,6 +6,7 @@ import Medecins from './pages/accueil/Medecins.jsx'
 import Rapports from './pages/accueil/Rapports.jsx'
 import App from './index/index.jsx'
 import './index.css'
+import FicheMedecin from './composant/fichemedecin.jsx'
 
 /*
 const NotFound = () =>{
@@ -24,7 +25,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'Medecins',
-        element: <Medecins />
+        element: <Medecins />,
+        children:[
+          {
+            path: 'id',
+            elemnt: <FicheMedecin />
+          },
+        ]
       },
       {
         path: 'Rapports',
