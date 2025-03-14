@@ -28,8 +28,8 @@ const router = createBrowserRouter([
         element: <Medecins />,
         children:[
           {
-            path: 'id',
-            elemnt: <FicheMedecin />
+            path: ':id',
+            element: <FicheMedecin />
           },
         ]
       },
