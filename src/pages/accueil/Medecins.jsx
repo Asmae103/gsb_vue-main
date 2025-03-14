@@ -74,7 +74,6 @@ function Medecins() {
 
       setVersion(version + 1)
       navigate('' + leMedecin.id)
-
       return leMedecin;
    }
 
